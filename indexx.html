@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>Pilihan Pernyataan</title>
+</head>
+<body>
+  <h1>Pilih Pernyataan Cinta Anda</h1>
+  <form>
+    <input type="radio" id="opsi1" name="pernyataan" value="Aku cinta kamu!">
+    <label for="opsi1">Aku cinta kamu!</label><br>
+    <input type="radio" id="opsi2" name="pernyataan" value="Kamu adalah segalanya bagiku.">
+    <label for="opsi2">Kamu adalah segalanya bagiku.</label><br>
+    <input type="radio" id="opsi3" name="pernyataan" value="Kamu adalah cahaya hidupku.">
+    <label for="opsi3">Kamu adalah cahaya hidupku.</label><br>
+    <button type="submit">Pilih</button>
+  </form>
+  <script>
+    const formPilihan = document.forms[0];
+    formPilihan.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const pilihan = document.querySelector('input[name="pernyataan"]:checked').value;
+      alert(pilihan);
+    });
+  </script>
+
+</body></html>
